@@ -1,0 +1,206 @@
+/* ============================================================
+   ABOUT PAGE STYLES
+   ============================================================ */
+
+/* ── BIO GRID ── */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Identity Card */
+.identity-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+
+.id-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--neon-dim);
+  border: 2px solid rgba(0,255,178,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-family: var(--font-cond);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--neon);
+}
+
+.id-name {
+  font-family: var(--font-cond);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+}
+
+.id-role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--neon);
+  margin: 0.3rem 0 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+.id-location {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.id-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 1.25rem 0;
+}
+
+.id-meta { text-align: left; display: flex; flex-direction: column; gap: 0.75rem; }
+
+.id-meta-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.id-meta-label { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.id-meta-val { color: var(--text-primary); font-weight: 600; font-size: 0.78rem; }
+.id-meta-val.neon { color: var(--neon); }
+.id-meta-val.accent { color: var(--accent); }
+
+/* Bio Text */
+.bio-heading {
+  font-family: var(--font-cond);
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--neon);
+  margin-bottom: 1.25rem;
+}
+
+.bio-text p {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+  font-size: 1rem;
+}
+
+.bio-text p strong { color: var(--text-primary); font-weight: 600; }
+
+.bio-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ── TIMELINE ── */
+.timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--neon), var(--blue), var(--border));
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.tl-item:last-child { margin-bottom: 0; }
+
+.tl-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 1.25rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-0);
+  border: 2px solid var(--border);
+  z-index: 1;
+}
+
+.tl-marker.neon   { border-color: var(--neon); background: rgba(0,255,178,0.15); }
+.tl-marker.accent { border-color: var(--accent); background: rgba(255,45,120,0.15); }
+.tl-marker.blue   { border-color: var(--blue); background: rgba(0,200,255,0.15); }
+
+.tl-content {
+  padding: 1.5rem 1.75rem;
+}
+
+.tl-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.tl-title {
+  font-family: var(--font-cond);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.03em;
+}
+
+.tl-body {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.tl-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* ── VALUE CARDS ── */
+.value-card {
+  padding: 2rem;
+  text-align: center;
+}
+
+.value-icon { font-size: 2.25rem; margin-bottom: 1rem; }
+
+.value-title {
+  font-family: var(--font-cond);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--neon);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.value-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .bio-grid { grid-template-columns: 1fr; }
+  .identity-card { position: static; max-width: 360px; margin: 0 auto; }
+}

@@ -1,0 +1,179 @@
+/* ============================================================
+   SKILLS PAGE STYLES
+   ============================================================ */
+
+/* ── PROFICIENCY GRID ── */
+.proficiency-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+}
+
+.prof-item { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.prof-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prof-name {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.prof-pct {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--neon);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+/* ── SKILL CATEGORIES ── */
+.skill-cats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.skill-cat { padding: 1.5rem; }
+
+.skill-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.skill-cat-header::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 40px;
+  height: 1px;
+}
+
+.neon-border::before   { background: var(--neon); }
+.blue-border::before   { background: var(--blue); }
+.accent-border::before { background: var(--accent); }
+.amber-border::before  { background: var(--amber); }
+
+.skill-cat-icon { font-size: 1.4rem; }
+
+.skill-cat-title {
+  font-family: var(--font-cond);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ── CERT CARDS ── */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cert-card {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card::after {
+  content: attr(data-bg);
+  position: absolute;
+  right: -8px;
+  bottom: -20px;
+  font-family: var(--font-cond);
+  font-size: 5rem;
+  font-weight: 900;
+  opacity: 0.04;
+  pointer-events: none;
+  letter-spacing: -0.05em;
+  color: white;
+}
+
+.accent-card { border-color: rgba(255,45,120,0.2); }
+.blue-card   { border-color: rgba(0,200,255,0.2); }
+.neon-card   { border-color: rgba(0,255,178,0.2); }
+
+.cert-status-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+
+.cert-status-pill.in-progress { background: rgba(255,45,120,0.1); border: 1px solid rgba(255,45,120,0.3); color: var(--accent); }
+.cert-status-pill.active      { background: rgba(0,200,255,0.1); border: 1px solid rgba(0,200,255,0.3); color: var(--blue); }
+.cert-status-pill.open        { background: rgba(0,255,178,0.08); border: 1px solid rgba(0,255,178,0.25); color: var(--neon); }
+
+.cert-abbr {
+  font-family: var(--font-cond);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.cert-full {
+  font-family: var(--font-cond);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.25rem;
+}
+
+.cert-issuer {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.cert-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .skill-cats { grid-template-columns: 1fr 1fr; }
+  .certs-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .proficiency-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .skill-cats { grid-template-columns: 1fr; }
+  .certs-grid { grid-template-columns: 1fr; }
+}

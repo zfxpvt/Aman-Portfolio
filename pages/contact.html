@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Aman Ahammed K.O — SOC Analyst open to opportunities in cybersecurity.">
+  <title>Contact — Aman Ahammed K.O</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">
+      <span class="bracket">[</span>ZFX<span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+
+  <main class="page-wrapper">
+    <div class="container">
+
+      <!-- PAGE HERO -->
+      <div class="page-hero reveal">
+        <p class="breadcrumb"><a href="../index.html">Home</a> / <span>Contact</span></p>
+        <div class="section-eyebrow">04 — Contact</div>
+        <h1 class="section-title">Let's <span class="hl">Connect</span></h1>
+        <p class="section-subtitle">
+          Open to SOC Analyst roles, cybersecurity internships, CTF collaborations,
+          or just a conversation about security. Reach out anytime.
+        </p>
+      </div>
+
+      <!-- CONTACT LAYOUT -->
+      <section class="section contact-section">
+        <div class="contact-layout">
+
+          <!-- Left: Info -->
+          <div class="contact-info reveal">
+
+            <div class="availability-card">
+              <div class="av-header">
+                <span class="status-badge">
+                  <span class="pulse-dot"></span>
+                  Available for Hire
+                </span>
+              </div>
+              <p class="av-desc">
+                Currently seeking entry-level SOC Analyst roles, cybersecurity internships,
+                and junior security engineer positions. Let's discuss how I can contribute to
+                your team.
+              </p>
+            </div>
+
+            <div class="contact-channels">
+
+              <a href="mailto:amanahammedko26@gmail.com" class="channel-item">
+                <div class="channel-icon neon-icon">✉</div>
+                <div class="channel-body">
+                  <div class="channel-label">Email</div>
+                  <div class="channel-val">amanahammedko26@gmail.com</div>
+                </div>
+                <span class="channel-arrow">→</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/amanahammedko" target="_blank" class="channel-item">
+                <div class="channel-icon blue-icon">in</div>
+                <div class="channel-body">
+                  <div class="channel-label">LinkedIn</div>
+                  <div class="channel-val">aman ahammed k.o</div>
+                </div>
+                <span class="channel-arrow">→</span>
+              </a>
+
+              <a href="https://github.com/zfxpvt" target="_blank" class="channel-item">
+                <div class="channel-icon muted-icon">&lt;/&gt;</div>
+                <div class="channel-body">
+                  <div class="channel-label">GitHub</div>
+                  <div class="channel-val">zfxpvt</div>
+                </div>
+                <span class="channel-arrow">→</span>
+              </a>
+
+              <a href="https://tryhackme.com/p/amanahmed.hq" target="_blank" class="channel-item">
+                <div class="channel-icon accent-icon">THM</div>
+                <div class="channel-body">
+                  <div class="channel-label">TryHackMe</div>
+                  <div class="channel-val">amanahmed.hq</div>
+                </div>
+                <span class="channel-arrow">→</span>
+              </a>
+
+            </div>
+
+            <!-- Copy Email -->
+            <div class="copy-wrap">
+              <span class="copy-label">Quick copy:</span>
+              <button class="copy-btn" id="copyEmail" data-email="amanahammedko26@gmail.com">Copy Email</button>
+            </div>
+
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact-form-wrap reveal reveal-delay-1">
+            <div class="form-card card">
+              <div class="form-header">
+                <div class="form-title">Send a Message</div>
+                <div class="form-subtitle">I'll respond within 24–48 hours.</div>
+              </div>
+
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" class="form-input" placeholder="John" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" class="form-input" placeholder="Smith">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="john@company.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="subject">Subject</label>
+                  <select id="subject" name="subject" class="form-input form-select">
+                    <option value="">Select a topic...</option>
+                    <option value="job">Job / Internship Opportunity</option>
+                    <option value="ctf">CTF Collaboration</option>
+                    <option value="collab">Project Collaboration</option>
+                    <option value="general">General Enquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">Message *</label>
+                  <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about the opportunity or what you'd like to discuss..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">Send Message →</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section class="section location-section">
+        <div class="divider" style="margin-bottom: 4rem;"></div>
+        <div class="location-block reveal">
+          <div class="section-eyebrow">Location</div>
+          <h2 class="section-title">Based in <span class="hl">Kerala</span></h2>
+          <p class="location-desc">
+            Currently in <strong>Kozhikode, Kerala, India</strong>.
+            Open to remote roles globally and on-site opportunities within India.
+          </p>
+          <div class="location-tags">
+            <span class="tag neon">Remote — Worldwide</span>
+            <span class="tag blue">On-site — India</span>
+            <span class="tag">Kozhikode, Kerala</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 <span>Aman Ahammed K.O</span> — SOC Analyst &amp; CEH</p>
+      <nav class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

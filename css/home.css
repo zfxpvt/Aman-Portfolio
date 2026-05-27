@@ -1,0 +1,212 @@
+/* ============================================================
+   HOME PAGE STYLES
+   ============================================================ */
+
+/* ── HERO ── */
+.hero {
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  align-items: center;
+  padding: 4rem 0 3rem;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-family: var(--font-cond);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-title .line-1 {
+  display: block;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  color: var(--text-primary);
+}
+
+.hero-title .line-2 {
+  display: block;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  color: var(--text-primary);
+}
+
+.hero-title .line-3 {
+  display: block;
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: transparent;
+  -webkit-text-stroke: 2px var(--neon);
+}
+
+.hero-desc {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-desc strong { color: var(--text-primary); font-weight: 600; }
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0 2rem 0 0;
+}
+
+.stat-item:first-child { padding-left: 0; }
+
+.stat-num {
+  font-family: var(--font-cond);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--neon);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.stat-sep {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+/* Terminal side */
+.hero-terminal {
+  position: relative;
+}
+
+.hero-terminal::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(ellipse at center, rgba(0,255,178,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── QUICK NAV ── */
+.quick-nav {
+  padding-top: 0;
+  padding-bottom: 5rem;
+}
+
+.qnav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.qnav-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.qnav-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--neon);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition);
+}
+
+.qnav-card:hover::before { transform: scaleY(1); }
+
+.qnav-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.qnav-title {
+  font-family: var(--font-cond);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.qnav-sub {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  letter-spacing: 0.05em;
+}
+
+.qnav-arrow {
+  margin-left: auto;
+  color: var(--neon);
+  font-size: 1.1rem;
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+
+.qnav-card:hover .qnav-arrow { transform: translateX(4px); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-terminal { max-width: 480px; }
+  .qnav-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .qnav-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 1rem 0; }
+}

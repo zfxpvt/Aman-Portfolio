@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects and labs by Aman Ahammed K.O — SOC case studies, CTF writeups, and cybersecurity projects.">
+  <title>Projects — Aman Ahammed K.O</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">
+      <span class="bracket">[</span>ZFX<span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="../index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main class="page-wrapper">
+    <div class="container">
+
+      <!-- PAGE HERO -->
+      <div class="page-hero reveal">
+        <p class="breadcrumb"><a href="../index.html">Home</a> / <span>Projects</span></p>
+        <div class="section-eyebrow">03 — Projects</div>
+        <h1 class="section-title">Labs &amp; <span class="hl">Case Studies</span></h1>
+        <p class="section-subtitle">
+          Hands-on security labs, incident simulations, CTF challenges, and real-world
+          practice exercises demonstrating applied cybersecurity skills.
+        </p>
+      </div>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="soc">SOC / IR</button>
+        <button class="filter-btn" data-filter="network">Networking</button>
+        <button class="filter-btn" data-filter="pentest">Pen Testing</button>
+      </div>
+
+      <!-- PROJECTS GRID -->
+      <section class="section projects-section">
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <div class="project-card card" data-category="soc">
+            <div class="proj-top">
+              <div class="proj-type-badge soc-badge">SOC / IR</div>
+              <div class="proj-status done-badge">Completed</div>
+            </div>
+            <div class="proj-title">SIEM Alert Triage Lab</div>
+            <div class="proj-desc">
+              Simulated SOC environment using Splunk to ingest logs, create detection rules,
+              and triage realistic alert scenarios. Practised escalation workflows and
+              incident documentation.
+            </div>
+            <div class="proj-tags">
+              <span class="tag neon">Splunk</span>
+              <span class="tag neon">SIEM</span>
+              <span class="tag neon">Log Analysis</span>
+              <span class="tag neon">Alert Triage</span>
+            </div>
+            <div class="proj-footer">
+              <a href="#" class="btn btn-ghost proj-btn">View Write-up →</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card card" data-category="network">
+            <div class="proj-top">
+              <div class="proj-type-badge net-badge">Networking</div>
+              <div class="proj-status done-badge">Completed</div>
+            </div>
+            <div class="proj-title">Network Traffic Analysis</div>
+            <div class="proj-desc">
+              Captured and analysed PCAP files using Wireshark to identify suspicious traffic
+              patterns, anomalous DNS queries, and potential C2 communication indicators.
+            </div>
+            <div class="proj-tags">
+              <span class="tag blue">Wireshark</span>
+              <span class="tag blue">PCAP</span>
+              <span class="tag blue">DNS Analysis</span>
+              <span class="tag blue">C2 Detection</span>
+            </div>
+            <div class="proj-footer">
+              <a href="#" class="btn btn-ghost proj-btn">View Write-up →</a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card card" data-category="pentest">
+            <div class="proj-top">
+              <div class="proj-type-badge pen-badge">Pen Testing</div>
+              <div class="proj-status done-badge">Completed</div>
+            </div>
+            <div class="proj-title">Vulnerability Scan &amp; Report</div>
+            <div class="proj-desc">
+              Conducted a full vulnerability assessment on a home lab network using Nessus
+              and Nmap. Documented findings in a professional penetration testing report format.
+            </div>
+            <div class="proj-tags">
+              <span class="tag accent">Nessus</span>
+              <span class="tag accent">Nmap</span>
+              <span class="tag accent">Vulnerability Assessment</span>
+            </div>
+            <div class="proj-footer">
+              <a href="#" class="btn btn-ghost proj-btn">View Write-up →</a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card card" data-category="pentest">
+            <div class="proj-top">
+              <div class="proj-type-badge pen-badge">Pen Testing</div>
+              <div class="proj-status active-badge">In Progress</div>
+            </div>
+            <div class="proj-title">Jr Penetration Tester</div>
+            <div class="proj-desc">
+              Actively building practical offensive security skills through hands-on labs and real-world simulation environments.
+              Working on vulnerability assessment, reconnaissance, web application testing, privilege escalation, and exploit analysis
+            </div>
+            <div class="proj-tags">
+              <span class="tag amber">Vulnerability Assessment</span>
+              <span class="tag amber">Burp Suite & Nmap</span>
+              <span class="tag amber">Network Enumeration</span>
+              <span class="tag amber">Linux & Windows Privilege Escalation</span>
+            </div>
+            <div class="proj-footer">
+              <a href="https://tryhackme.com" target="_blank" class="btn btn-ghost proj-btn">View Profile →</a>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card card" data-category="soc">
+            <div class="proj-top">
+              <div class="proj-type-badge soc-badge">SOC / IR</div>
+              <div class="proj-status done-badge">Completed</div>
+            </div>
+            <div class="proj-title">Phishing Email Analysis</div>
+            <div class="proj-desc">
+              Analysed a set of simulated phishing emails — examining headers, links,
+              payloads, and sender reputation. Produced an IOC report and recommended
+              defensive controls.
+            </div>
+            <div class="proj-tags">
+              <span class="tag neon">Email Forensics</span>
+              <span class="tag neon">IOC Extraction</span>
+              <span class="tag neon">OSINT</span>
+            </div>
+            <div class="proj-footer">
+              <a href="#" class="btn btn-ghost proj-btn">View Write-up →</a>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card card" data-category="pentest">
+            <div class="proj-top">
+              <div class="proj-type-badge pen-badge">Pen Testing</div>
+              <div class="proj-status active-badge">In Progress</div>
+            </div>
+            <div class="proj-title">CEH Practical Labs</div>
+            <div class="proj-desc">
+              Hands-on CEH exam prep labs covering enumeration, exploitation,
+              social engineering, web application attacks, session hijacking,
+              and cryptography modules.
+            </div>
+            <div class="proj-tags">
+              <span class="tag accent">CEH</span>
+              <span class="tag accent">Metasploit</span>
+              <span class="tag accent">Burp Suite</span>
+              <span class="tag accent">Web Attacks</span>
+            </div>
+            <div class="proj-footer">
+              <a href="#" class="btn btn-ghost proj-btn">View Notes →</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="proj-cta-block reveal">
+        <div class="terminal" style="max-width:600px; margin: 0 auto 2rem;">
+          <div class="terminal-bar">
+            <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
+            <span class="terminal-label">projects-status.sh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">&nbsp;ls projects/</span></div>
+            <div class="t-ok">[✓] siem-lab/</div>
+            <div class="t-ok">[✓] network-analysis/</div>
+            <div class="t-ok">[✓] active directory/</div>
+            <div class="t-warn">[~] ceh-labs/  &nbsp; &lt;in-progress&gt;</div>
+            <div class="t-ok">[✓] phishing-analysis/</div>
+            <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">&nbsp;echo "More coming soon..."</span></div>
+            <div class="t-ok">More coming soon...</div>
+            <div class="t-line"><span class="t-prompt">$</span><span class="cursor-blink"></span></div>
+          </div>
+        </div>
+        <p>Have a project idea or want to collaborate on a project?</p>
+        <a href="contact.html" class="btn btn-primary">Let's Collaborate →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 <span>Aman Ahammed K.O</span></p>
+      <nav class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
